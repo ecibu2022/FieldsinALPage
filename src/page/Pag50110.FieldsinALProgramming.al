@@ -80,6 +80,7 @@ page 50110 "Fields in AL Programming"
                 ApplicationArea=All;
                 Caption='Amount';
                 ToolTip='This is a decimal field';
+                Style=Strong;
                 }
 
                  field(MyCode; CodeField)
@@ -97,6 +98,11 @@ page 50110 "Fields in AL Programming"
                 // Disabling this field
                 Editable=false;
                 }
+                
+            }
+
+            part(MyItemLines; "ListPart Page")
+            {
                 
             }
 
@@ -130,6 +136,7 @@ page 50110 "Fields in AL Programming"
         Age: Integer;
         CodeField: Code[50];
         MyDisabledField: Text;
+        Map: Text;
 }
 
 
@@ -142,5 +149,56 @@ enum 50111 "Status Enum"
     }
     value(1; NO)
     {
+    }
+}
+
+
+page 50132 "ListPart Page"
+{
+    PageType = ListPart;
+    // ListPart is the like the lines in the tem when making sales order
+    ApplicationArea = All;
+    UsageCategory = Lists;
+    SourceTable = "My Item";
+    
+    layout
+    {
+        area(Content)
+        {
+            repeater(GroupName)
+            {
+                field(No; Rec."Item No.")
+                {
+                    ApplicationArea = All;
+                    
+                }
+                field("Description"; Rec.Description)
+                {
+                    ApplicationArea = All;
+                }
+                field("Unit Price";Rec."Unit Price")
+                {
+
+                }
+            
+            }
+        }
+       
+    }
+    
+    actions
+    {
+        area(Processing)
+        {
+            action(ActionName)
+            {
+                ApplicationArea = All;
+                
+                trigger OnAction();
+                begin
+                    
+                end;
+            }
+        }
     }
 }
