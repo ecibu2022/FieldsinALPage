@@ -75,6 +75,16 @@ page 50133 "Lines"
                     ApplicationArea = All;
                     
                 }
+
+                field("CheckBox Demo"; MyCheckBox)
+                {
+                    ApplicationArea = All;
+                }
+
+                field("Select Demo"; Gender)
+                {
+                    ApplicationArea = All;
+                }
             }
         }
        
@@ -96,5 +106,10 @@ page 50133 "Lines"
             }
         }
     }
+
+
+    var
+    MyCheckBox: Boolean;
+    Gender: Option Select, Male, Female, Others;
 }
 
