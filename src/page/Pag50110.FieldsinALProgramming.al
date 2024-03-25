@@ -3,7 +3,6 @@ page 50110 "Fields in AL Programming"
     PageType = Card;
     ApplicationArea = Basic, Suite;
     UsageCategory = Administration;
-    // SourceTable = TableName;
     Caption='Fields in AL Programming';
     
     layout
@@ -101,12 +100,19 @@ page 50110 "Fields in AL Programming"
                 
             }
 
+                field(Comments; Comments)
+                {
+                    ApplicationArea = All;
+                    MultiLine = true;
+            }
+
             part(MyItemLines; "ListPart Page")
             {
                 
             }
 
         }
+
     }
     
     actions
@@ -136,8 +142,8 @@ page 50110 "Fields in AL Programming"
         Age: Integer;
         CodeField: Code[50];
         MyDisabledField: Text;
-        Map: Text;
-}
+        Map, Comments: Text;
+        }
 
 
 enum 50111 "Status Enum"

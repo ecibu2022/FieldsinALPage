@@ -250,14 +250,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Balance">
+                        <Textbox Name="Balance__LCY_">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Balance.Value</Value>
+                                  <Value>=Fields!Balance__LCY_.Value</Value>
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -268,7 +268,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Balance</rd:DefaultName>
+                          <rd:DefaultName>Balance__LCY_</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1039,11 +1039,11 @@ MTAwLFwic2hhcnBuZXNzXCI6MTAwLFwiZGVmaW5pdGlvblwiOjEwMH0iLCJlZmZlY3RWYWx1ZSI6Intc
         <Field Name="Name">
           <DataField>Name</DataField>
         </Field>
-        <Field Name="Balance">
-          <DataField>Balance</DataField>
+        <Field Name="Balance__LCY_">
+          <DataField>Balance__LCY_</DataField>
         </Field>
-        <Field Name="BalanceFormat">
-          <DataField>BalanceFormat</DataField>
+        <Field Name="Balance__LCY_Format">
+          <DataField>Balance__LCY_Format</DataField>
         </Field>
         <Field Name="BalanceDue">
           <DataField>BalanceDue</DataField>

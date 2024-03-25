@@ -28,7 +28,7 @@ report 50138 MyReport
             column(Name; Name)
             {
             }
-            column(Balance; Balance)
+            column(Balance__LCY_;"Balance (LCY)")
             {
             }
             column(BalanceDue; "Balance Due")
